@@ -1,37 +1,5 @@
-<!DOCTYPE html>
 <html>
 <head>
-
-
-<script>
-var canvas, stage, exportRoot;
-
-function init() {
-	canvas = document.getElementById("canvas");
-	images = images||{};
-
-	var loader = new createjs.LoadQueue(false);
-	loader.addEventListener("fileload", handleFileLoad);
-	loader.addEventListener("complete", handleComplete);
-	loader.loadManifest(lib.properties.manifest);
-}
-
-function handleFileLoad(evt) {
-	if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
-}
-
-function handleComplete(evt) {
-	exportRoot = new lib.XCOM_300x250_ALT2();
-
-	stage = new createjs.Stage(canvas);
-	stage.addChild(exportRoot);
-	stage.update();
-
-	createjs.Ticker.setFPS(lib.properties.fps);
-	createjs.Ticker.addEventListener("tick", stage);
-}
-</script>
-
 
 <!-- Start: GPT Async -->
 <script type='text/javascript'>
@@ -76,15 +44,11 @@ function handleComplete(evt) {
 </script>
 <!-- End: GPT -->
 
-
 </head>
 
-<body onload="init();" style="background-color:#D4D4D4">
-    <a href="javascript:window.open(window.clickTag)">
-	   <canvas id="canvas" width="300" height="250" style="background-color:#000000"></canvas>
-    </a>
-    
-    <!-- Beginning Async AdSlot 1 for Ad unit wowchakra.com  ### size: [[728,90],[970,90]] -->
+<body>
+
+<!-- Beginning Async AdSlot 1 for Ad unit wowchakra.com  ### size: [[728,90],[970,90]] -->
 <!-- Adslot's refresh function: googletag.pubads().refresh([gptadslots[1]]) -->
 <div id='div-gpt-ad-175077616251224484-1'>
 	<script type='text/javascript'>
@@ -139,7 +103,8 @@ function handleComplete(evt) {
 <!-- End AdSlot 6 -->
 
 
-
-    
 </body>
+
+
+
 </html>
